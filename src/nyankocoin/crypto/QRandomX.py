@@ -1,0 +1,18 @@
+import threading
+
+from nyankocoin.core.Singleton import Singleton
+from pyqrandomx import pyqrandomx
+
+
+class QRandomX(object, metaclass=Singleton):
+
+    def __init__(self):
+        self.lock = threading.Lock()
+        self._qrx = pyqrandomx.ThreadedQRandomX()
+
+    def get_seed_height(self, block_number):
+        return self._qrx.getSeedHeight(block_number)
+
+    def hash(self, block_height, seed_height, seed_hash, blob):
+        with self.lock:
+            return bytes(self._qrx.hash(block_height, seed_height, seed_hash, blob, 0))
