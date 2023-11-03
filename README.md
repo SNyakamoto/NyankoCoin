@@ -1,6 +1,6 @@
 
 # Nyanko Coin 
-Nyanko Coin is a post-quantum crytocurrency build in Python
+Nyanko Coin is a post-quantum cryptocurrency built in Python
 
 ## Development
 
