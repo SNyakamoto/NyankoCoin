@@ -22,3 +22,10 @@ pip3 install -U setupTools
 ```
 pip3 install -U nyankocoin
 ```
+
+## Running NyankoCoin
+
+Run NyankoCoin with:
+```
+nyankocoin_start
+```
